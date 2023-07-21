@@ -1,0 +1,56 @@
+@import 'variables';
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+
+    @media (min-width: 901px){
+        position: fixed;
+        top: 10vh;
+        flex-direction: column;
+        width: 240px;
+        height: calc(90vh - 30px);
+        margin: 15px 0;
+        border-right: 1px solid gray;
+        overflow-x: auto;
+    }
+
+    &__btn{
+        display: flex;
+        align-items: center;
+        color: $font-color;
+        background-color: transparent;
+        padding: 15px;
+        font-family: $normal-font;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        transition: .3s;
+        text-decoration: none;
+
+        @media (min-width: 901px){
+            display: block;
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        &--active{
+            background-color: $special-bgc;
+            color: black;
+        }
+
+        &-icon{
+            position: relative;
+            top: -4px;
+            width: 30px;
+            left: -5px;
+
+            @media (min-width: 901px){
+                top: 4px;
+                padding-right: 5px;
+            }
+        }
+    }
+}

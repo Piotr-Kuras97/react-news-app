@@ -1,0 +1,99 @@
+@import 'variables';
+
+.article-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: .7);
+    z-index: 3
+}
+
+.article{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    background-color: black;
+    overflow-x: auto;
+    border: 1px solid white;
+    padding-bottom: 15px;
+    z-index: 4;
+
+    @media(min-width: 781px){
+        left: 20%;
+        right: 20%;
+    }
+
+    &__icon{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 2rem;
+
+        @media(min-width: 781px){
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    &__title{
+        font-family: $special-font;
+        padding: 35px 10px 10px 10px;
+        text-align: center;
+        font-size: 1.4rem;
+
+        @media(min-width: 781px){
+            font-size: 1.8rem;
+            padding-bottom: 25px;
+        }
+
+        @media(min-width: 1024px){
+            font-size: 2rem;
+        }
+    }
+
+    &__content{
+        padding: 0 12px;
+        text-align: justify;
+        font-family: $normal-font;
+        font-size: 1.2rem;
+        line-height: 1.5;
+
+        @media(min-width: 781px){
+            padding: 0 20px;
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        @media(min-width: 1024px){
+            padding: 0 35px;
+            line-height: 1.7;
+            font-size: 1.6rem
+        }
+    }
+    &__btn-group{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 25px;
+
+        button{
+            padding: 5px 10px;
+            font-family: $special-font;
+            background-color: white;
+            border: 2px solid gray;
+            cursor: pointer;
+
+            @media(min-width: 781px){
+                padding: 8px 15px;
+                font-size: 1.6rem;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
