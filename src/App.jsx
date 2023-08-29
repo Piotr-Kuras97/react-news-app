@@ -13,11 +13,11 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("en")
   const [data, setData] = useState(null)
 
-  // useEffect(() => {
-  //     setData(null)
-  //     fetchFromAPI(`category=${selectedCategory}&language=${selectedLanguage}`)
-  //         .then(data => setData(data.results))
-  // }, [selectedCategory, selectedLanguage])
+   useEffect(() => {
+       setData(null)
+       fetchFromAPI(`category=${selectedCategory}&language=${selectedLanguage}`)
+          .then(data => setData(data.results))
+  }, [selectedCategory, selectedLanguage])
 
 
   return (
